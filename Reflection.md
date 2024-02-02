@@ -14,7 +14,7 @@ The combination of K-means clustering and HSV color thresholding in the project 
 - **Complex Backgrounds**: Scenarios with complex backgrounds, like urban landscapes with tall buildings, made it difficult to accurately segment the sky.
 
 ### Solutions
-- **Dual Color Thresholding**: Implementing two color thresholds for different times of the day, particularly for sunrise and sunset hues, greatly enhanced accuracy.
+- **Dual Color Thresholding**: Implementing two color thresholds for different times of the day, particularly for daytime, and sunrise sunset hues, greatly enhanced accuracy.
 - **Segmentation Adjustment**: Extending the segmentation from the top half to the upper two-thirds of the image improved the detection accuracy in various scenarios.
 - **Adaptive Thresholding**: Modifying color thresholds based on the overall brightness of the image to handle different lighting conditions.
 
