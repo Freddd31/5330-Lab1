@@ -56,7 +56,7 @@ Sky Detector is hosted on Hugging Face Spaces, providing an easy and interactive
 
 3. **Analyze the Sky**: After uploading your image, the application will automatically process it. Wait for a few moments for the analysis to complete.
 
-4. **View Results**: Once the analysis is done, you'll see the results displayed on the screen. This may include information about cloud types, weather conditions, or other relevant data depending on what the Sky Detector is designed to do.
+4. **View Results**: Once the analysis is done, you'll see the results displayed on the screen, with original picture on the left, and the final image with white sky.
 
 5. **Interact and Experiment**: Feel free to upload different images and explore the capabilities of Sky Detector.
 
