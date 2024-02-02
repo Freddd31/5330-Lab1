@@ -1,5 +1,5 @@
 
-# Reflection on Sky Segmentation Project
+# Reflection on Sky Detector Project
 
 ## Effectiveness of the Approach
 The combination of K-means clustering and HSV color thresholding in the project significantly improved the accuracy of sky segmentation in images. Initially, without K-means, many non-sky elements were incorrectly identified as sky, affecting accuracy. Integrating K-means clustering effectively addressed this issue.
