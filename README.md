@@ -18,11 +18,27 @@ pip install gradio cv2 numpy matplotlib scikit-learn Pillow
 ```
 
 ## Usage Instructions
-The project includes a Gradio interface for uploading images and displaying the various steps of the processing. To launch the interface, run the following code:
+1.The project includes a Gradio interface for uploading images and displaying the various steps of the processing. To launch the interface in the local Gradio, run the following code:
 
-```python
-demo.launch()
-```
+    ```python
+    demo = gr.Interface(
+    fn=process_image_and_display_all_steps_gradio,
+    inputs="image",
+    outputs="image"
+    )
+    demo.launch()
+    ```
+2. Accessing the Deployed Application:
+    To run the application on the deployed website through Hugging Face Spaces, follow these steps:
+    1. First, ensure Git LFS (Large File Storage) is installed on your system. If not, install it using the following command:
+   
+        '''git lfs install'''
+    2. Clone the repository from Hugging Face Spaces:
+    
+        '''git clone https://huggingface.co/spaces/Fredrickkk/Sky-Detector'''
+        
+    3. After cloning, navigate to the cloned directory and execute the application as per the provided instructions in the repository.    
+
 
 ## Example
 - Run the program.
@@ -30,4 +46,17 @@ demo.launch()
 - View and analyze the processed results, including the K-means sky mask, blue sky mask, sunset sky mask, morphologically processed mask, and the final image with white sky.
 
 
+## Accessing Sky Detector on Hugging Face
+
+Sky Detector is hosted on Hugging Face Spaces, providing an easy and interactive way to use the application. To access it, follow these simple steps:
+
+1. **Visit the Application**: Open your web browser and go to [Sky Detector on Hugging Face](https://huggingface.co/spaces/Fredrickkk/Sky-Detector).
+
+2. **Upload Your Image**: Once you are on the Sky Detector page, you can upload an image of the sky that you want to analyze. Look for the upload button or drag-and-drop area to add your image.
+
+3. **Analyze the Sky**: After uploading your image, the application will automatically process it. Wait for a few moments for the analysis to complete.
+
+4. **View Results**: Once the analysis is done, you'll see the results displayed on the screen. This may include information about cloud types, weather conditions, or other relevant data depending on what the Sky Detector is designed to do.
+
+5. **Interact and Experiment**: Feel free to upload different images and explore the capabilities of Sky Detector.
 
