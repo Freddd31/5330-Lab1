@@ -18,6 +18,7 @@ from PIL import Image
 
 def segment_sky_with_kmeans(image_rgb):
     h, w = image_rgb.shape[:2]
+    
     reshaped_img = image_rgb.reshape((-1, 3)).astype(np.float32)
 
       # Using 2 cluster centers
@@ -67,31 +68,28 @@ def process_image_and_display_all_steps(image_rgb):
     image_with_white_sky[mask_morph != 0] = (255, 255, 255)
 
     # Display the key steps of the process
-    fig, axs = plt.subplots(1, 6, figsize=(18, 5))
+    fig, axs = plt.subplots(1, 5, figsize=(30, 15))
 
-    axs[0].imshow(image_rgb)
-    axs[0].set_title('Original Image')
+
+    axs[0].imshow(sky_mask_kmeans, cmap='gray')
+    axs[0].set_title('K-means Sky Mask')
     axs[0].axis('off')
 
-    axs[1].imshow(sky_mask_kmeans, cmap='gray')
-    axs[1].set_title('K-means Sky Mask')
+    axs[1].imshow(mask_blue, cmap='gray')
+    axs[1].set_title('Blue Sky Mask')
     axs[1].axis('off')
 
-    axs[2].imshow(mask_blue, cmap='gray')
-    axs[2].set_title('Blue Sky Mask')
+    axs[2].imshow(mask_orange_red, cmap='gray')
+    axs[2].set_title('Sunset Sky Mask')
     axs[2].axis('off')
 
-    axs[3].imshow(mask_orange_red, cmap='gray')
-    axs[3].set_title('Sunset Sky Mask')
+    axs[3].imshow(mask_morph, cmap='gray')
+    axs[3].set_title('Morphological Mask')
     axs[3].axis('off')
 
-    axs[4].imshow(mask_morph, cmap='gray')
-    axs[4].set_title('Morphological Mask')
+    axs[4].imshow(image_with_white_sky)
+    axs[4].set_title('Image with White Sky')
     axs[4].axis('off')
-
-    axs[5].imshow(image_with_white_sky)
-    axs[5].set_title('Image with White Sky')
-    axs[5].axis('off')
 
     plt.tight_layout()
 
