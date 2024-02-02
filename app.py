@@ -68,28 +68,11 @@ def process_image_and_display_all_steps(image_rgb):
     image_with_white_sky[mask_morph != 0] = (255, 255, 255)
 
     # Display the key steps of the process
-    fig, axs = plt.subplots(1, 5, figsize=(30, 15))
+    fig, axs = plt.subplots(1, 1, figsize=(30, 15))
 
-
-    axs[0].imshow(sky_mask_kmeans, cmap='gray')
-    axs[0].set_title('K-means Sky Mask')
-    axs[0].axis('off')
-
-    axs[1].imshow(mask_blue, cmap='gray')
-    axs[1].set_title('Blue Sky Mask')
-    axs[1].axis('off')
-
-    axs[2].imshow(mask_orange_red, cmap='gray')
-    axs[2].set_title('Sunset Sky Mask')
-    axs[2].axis('off')
-
-    axs[3].imshow(mask_morph, cmap='gray')
-    axs[3].set_title('Morphological Mask')
-    axs[3].axis('off')
-
-    axs[4].imshow(image_with_white_sky)
-    axs[4].set_title('Image with White Sky')
-    axs[4].axis('off')
+    axs.imshow(image_with_white_sky)
+    axs.set_title('Image with White Sky')
+    axs.axis('off')
 
     plt.tight_layout()
 
